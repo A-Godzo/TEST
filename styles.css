@@ -1,10 +1,59 @@
-div{
-    width: 500px;
-    height: 500px;
-    color: blue;
-    background-color: black;
+.content{
+
+    position: absolute;
+    top: 25%;
+    right: 10%;
+    display: flex;
+    width: 80%;
+    height: 50%;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
 }
 
-body{
+.naslov{
+
+    margin-top: 5%;
+    text-align: center;
     font-family: sans-serif;
+    background-color: aqua;
+    font-size: 2em;
+}
+
+.item{
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#fcf0da ;
+    width: 40%;
+    height: 40%;
+    margin-bottom: 20px;
+    border-radius: 12%;
+    border: solid 1px black;
+
+}
+
+.item:hover {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#fcf0da ;
+    width: 40%;
+    height: 40%;
+    margin-bottom: 20px;
+    border-radius: 12%;
+    border: solid 1px black;
+    box-shadow: 10px 10px black;
+    
+
+}
+.item p {
+
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: larger;
+
 }
