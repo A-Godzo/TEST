@@ -1,59 +1,168 @@
-.content{
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      background-color: #f8f8f8;
+      color: #111;
+    }
 
-    position: absolute;
-    top: 25%;
-    right: 10%;
-    display: flex;
-    width: 80%;
-    height: 50%;
-    margin: auto;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #ffffff;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
 
+    .logo {
+    height: 80px;      
+    width: auto;
+    object-fit: contain;
+    display: block;
+    margin-top: -15px; 
+    margin-bottom: -15px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links .here{
+      text-decoration: underline;
+      color: #111;
+      font-weight: 500;
+      font-size: 1.2rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #111;
+      font-weight: 500;
+      font-size: 1.2rem;
+    }
+
+    .nav-links a:hover{
+      text-decoration: underline;
+      color: #111;
+      font-weight: 500;
+      font-size: 1.2rem;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 6rem auto;
+      padding: 0 1.5rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #444;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+ .quick-links-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 180px); /* Increased from 120px to 180px */
+  grid-template-rows: repeat(2, 120px);
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2.5rem;
 }
 
-.naslov{
-
-    margin-top: 5%;
-    text-align: center;
-    font-family: sans-serif;
-    background-color: aqua;
-    font-size: 2em;
+.quick-link-square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #222;
+  text-decoration: none;
+  transition: transform 0.18s, box-shadow 0.18s, background 0.18s;
+  height: 100%;
+  width: 100%;
 }
 
-.item{
- 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color:#fcf0da ;
-    width: 40%;
-    height: 40%;
-    margin-bottom: 20px;
-    border-radius: 12%;
-    border: solid 1px black;
-
+.quick-link-square:hover {
+  background: #e0e7ff;
+  color: #1a237e;
+  transform: translateY(-6px) scale(1.06);
+  box-shadow: 0 8px 24px rgba(26,35,126,0.13);
 }
 
-.item:hover {
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color:#fcf0da ;
-    width: 40%;
-    height: 40%;
-    margin-bottom: 20px;
-    border-radius: 12%;
-    border: solid 1px black;
-    box-shadow: 10px 10px black;
-    
-
+@media (max-width: 900px) {
+  .container {
+    max-width: 98vw;
+    margin: 3rem auto;
+    padding: 0 0.5rem;
+  }
+  .quick-links-grid {
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+    grid-template-rows: repeat(2, 100px);
+    gap: 1rem;
+  }
+  .quick-link-square {
+    font-size: 1rem;
+  }
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+  .nav-links {
+    margin-top: 0.5rem;
+    gap: 1rem;
+  }
+  .logo {
+    height: 60px;
+    margin: 0;
+  }
 }
-.item p {
 
-    font-family: sans-serif;
-    font-weight: bold;
-    font-size: larger;
-
+@media (max-width: 600px) {
+  .container {
+    margin: 2rem auto;
+    padding: 0 0.25rem;
+  }
+  .quick-links-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 70px);
+    gap: 0.75rem;
+  }
+  .quick-link-square {
+    font-size: 0.95rem;
+    border-radius: 10px;
+  }
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
+  .logo {
+    height: 45px;
+    margin: 0 0 0.5rem 0;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1rem;
+    max-width: 98vw;
+  }
 }
